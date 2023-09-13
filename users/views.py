@@ -51,6 +51,7 @@ def registerUser(request):
 
 def logoutUser(request):
     logout(request)
+    messages.info(request, 'User was loged out!')
     return redirect('login')
 
 def profiles(request):
